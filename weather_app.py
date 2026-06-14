@@ -30,9 +30,11 @@ logger = logging.getLogger(__name__)
 # ──────────────────────────────────────────────────────────────────[...]
 # 🔑 CONFIGURATION
 # ──────────────────────────────────────────────────────────────────[...]
-# Create a new API key which is provided in the read me file
+API_KEY = os.getenv("OPENWEATHER_API_KEY", "b997---b5cc8ee-----------------1")
+if not API_KEY or API_KEY == "b997---b5cc8ee-------------------1":
+    logger.warning("Using hardcoded API key. Set OPENWEATHER_API_KEY environment variable for production.")
 
-# BASE_URL = "https://api.openweathermap.org/data/2.5"
+BASE_URL = "https://api.openweathermap.org/data/2.5"
 
 # ──────────────────────────────────────────────────────────────────[...]
 # 📐 UI CONSTANTS
