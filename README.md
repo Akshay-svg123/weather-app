@@ -70,10 +70,8 @@ Open `weather_app.py` and find this line near the top:
 ```python
 API_KEY = "YOUR_API_KEY_HERE"
 ```
-Replace it with your actual key:
-```python
-API_KEY = "b997917b5cc8ee8caa32d9bad8b0fcb1"
-```
+Go to the openweathermap.org website and create an API key
+and replace the "YOUR_API_KEY_HERE"
 
 ### Step 5 — Run the App:
 ```bash
@@ -126,7 +124,30 @@ All other libraries (`tkinter`, `threading`, `json`, `datetime`, `webbrowser`, `
 | **Project Type** | Mini Project (Summer Break Assignment) |
 
 ---
+## ✨ Features
 
+### 🎨 Modern User Interface
+- **Custom Rounded Corners:** Uses native Tkinter Canvas tricks to render smooth, anti-aliased rounded rectangles.
+- **Dynamic Search Bar:** A custom-built "pill" search bar featuring CSS-like interactive states (Hover & Focus effects) and dynamic placeholder text.
+- **Dark Mode Aesthetic:** Carefully curated color palette (`#1a1a2e` backgrounds, `#e94560` accents) that is easy on the eyes.
+- **Responsive Layout:** Scrollable main area with grid-based metric cards that adapt gracefully.
+
+---
+
+### 🌦️ Weather Capabilities
+- **Real-Time Data:** Live current weather conditions including temperature, "feels like", humidity, wind speed, pressure, and visibility.
+- **5-Day Forecast:** Extracts and displays the midday forecast for the upcoming 5 days.
+- **Sunrise/Sunset:** Localized tracking for the searched city.
+- **Unit Toggling:** Instantly switch between Metric (°C / m/s) and Imperial (°F / mph).
+
+### ⚙️ Under the Hood (Engineering)
+- **Robust API Client:** Custom `WeatherAPIClient` featuring built-in **exponential backoff & retry logic** for handling spotty network connections.
+- **Data Serialization:** Strictly typed using Python `dataclasses` (`WeatherInfo`, `ForecastDay`) for clean and predictable API parsing.
+- **State Persistence:** Automatically saves your last searched city and unit preferences to `~/.weather_app/config.ini` so you pick up exactly where you left off.
+- **Asynchronous Fetching:** API calls are executed on a daemon background `threading.Thread` so the GUI never freezes while loading.
+- **Integrated Logging:** Built-in `logging` setup for easy debugging and error tracking.
+
+---
 ## 📄 License
 
 This project is built for educational purposes as part of a Python programming course mini project.
