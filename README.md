@@ -30,7 +30,6 @@ Language   : Python 3.x
 GUI        : Tkinter (built-in)
 API        : OpenWeatherMap (free tier)
 Libraries  : requests, threading, json, datetime, webbrowser
-Easter Egg : antigravity (Python built-in Easter egg module)
 ```
 
 ---
@@ -76,7 +75,7 @@ Replace it with your actual key:
 API_KEY = "b997917b5cc8ee8caa32d9bad8b0fcb1"
 ```
 
-### Step 5 — Run the App 🎉
+### Step 5 — Run the App:
 ```bash
 python weather_app.py
 ```
