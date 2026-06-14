@@ -95,7 +95,7 @@ class RoundedCard(tk.Canvas):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 🔍 SEARCH BAR (Light Mode Pill with Focus/Hover states)
+# 🔍 SEARCH BAR (Big headache)
 # ══════════════════════════════════════════════════════════════════════════════
 class SearchBar(tk.Frame):
     def __init__(self, parent, command, font_subtitle, **kwargs):
@@ -225,7 +225,7 @@ class SearchBar(tk.Frame):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 🌤️ WEATHER APP
+# 🌤️ WEATHER APP (Even more bigger headache 🤕)
 # ══════════════════════════════════════════════════════════════════════════════
 class WeatherApp:
 
